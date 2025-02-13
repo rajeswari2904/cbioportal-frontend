@@ -295,12 +295,6 @@ export default class CancerStudySelector extends React.Component<
                         Select Studies for Visualization & Analysis:
                     </SectionHeader>
 
-                    {this.store.selectableStudiesSet.isComplete && (
-                        <div>
-                            <StudySelectorStats store={this.store} />
-                        </div>
-                    )}
-
                     <Observer>
                         {() => {
                             let searchTextOptions = ServerConfigHelpers.skin_example_study_queries(
