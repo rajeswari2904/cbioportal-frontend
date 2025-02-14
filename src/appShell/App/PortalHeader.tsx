@@ -30,7 +30,7 @@ export default class PortalHeader extends React.Component<
 
             {
                 id: 'webAPI',
-                text: 'Web API',
+                text: 'API',
                 address: 'https://docs.cbioportal.org/web-api-and-clients/',
                 internal: false,
                 hide: () => getServerConfig().skin_show_web_api_tab === false,
@@ -45,19 +45,20 @@ export default class PortalHeader extends React.Component<
             },
 
             {
-                id: 'tutorials',
-                text: 'Tutorials/Webinars',
-                address: 'https://docs.cbioportal.org/user-guide/overview/',
+                id: 'learn',
+                text: 'Learn',
+                address: 'https://docs.cbioportal.org/',
                 internal: false,
-                hide: () => getServerConfig().skin_show_tutorials_tab === false,
+                hide: () => getServerConfig().skin_show_learn_tab === false,
             },
 
             {
-                id: 'faq',
-                text: 'FAQ',
-                address: 'https://docs.cbioportal.org/user-guide/faq/',
+                id: 'contribute',
+                text: 'Contribute',
+                address: 'https://docs.cbioportal.org/',
                 internal: false,
-                hide: () => getServerConfig().skin_show_faqs_tab === false,
+                hide: () =>
+                    getServerConfig().skin_show_contribute_tab === false,
             },
 
             {
@@ -82,6 +83,14 @@ export default class PortalHeader extends React.Component<
                 address: 'https://docs.cbioportal.org/about-us/',
                 internal: false,
                 hide: () => getServerConfig().skin_show_about_tab === false,
+            },
+
+            {
+                id: 'contact',
+                text: 'Contact',
+                address: '/contact',
+                internal: true,
+                hide: () => getServerConfig().skin_show_contact_tab === false,
             },
 
             {
